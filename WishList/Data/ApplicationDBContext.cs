@@ -1,10 +1,11 @@
 ﻿using System;
+using Microsoft.EntityFrameworkCore;
+using WishList.Models;
+
 namespace WishList.Data
 {
-    public class ApplicationDBContext
+    public class ApplicationDBContext : DbContext
     {
-        public ApplicationDBContext()
-        {
-        }
+        public DbSet<Item> Items { get; set; }
     }
 }
