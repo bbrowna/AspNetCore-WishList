@@ -39,9 +39,6 @@ namespace WishList.Controllers
         public IActionResult Delete(int Id)
         {
 
-            _context.Items.RemoveRange(Index.ID);
-
-
             return (RedirectToAction());
         }
     }
