@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WishList.Data;
 using WishList.Models;
+using System.Collections.Generic;
 
 namespace WishList.Controllers 
 {
@@ -32,6 +33,15 @@ namespace WishList.Controllers
 
             _context.Items.Add(item);
             _context.SaveChanges();
+            return (RedirectToAction());
+        }
+
+        public IActionResult Delete(int Id)
+        {
+
+            _context.Items.RemoveRange(Index.ID);
+
+
             return (RedirectToAction());
         }
     }
